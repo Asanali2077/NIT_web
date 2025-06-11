@@ -1,11 +1,52 @@
 .open-source-tools {
   width: 100%;
-  padding: 64.10px 120px;
-  background: white;
+  padding: 80px 120px;
+  background: #F5F5F5;
+}
+
+.tools-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 48.07px;
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.tools-text {
+  text-align: center;
+  max-width: 800px;
+}
+
+.tools-text h2 {
+  color: #1E1E1E;
+  font-size: 40px;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  line-height: 48px;
+  margin-bottom: 24px;
+}
+
+.tools-text p {
+  color: #1E1E1E;
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.tools-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
 }
 
 .open-source-tools h2 {

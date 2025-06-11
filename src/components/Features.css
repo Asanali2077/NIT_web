@@ -23,12 +23,21 @@
   color: #F5F5F5;
 }
 
+.feature-card.dark h2 {
+  color: #F5F5F5;
+}
+
+.feature-card.dark p {
+  color: #F5F5F5;
+}
+
 .feature-card h2 {
   font-size: 24px;
   font-family: Inter, sans-serif;
   font-weight: 600;
   line-height: 28.80px;
   margin: 0;
+  color: #000000;
 }
 
 .feature-card p {
@@ -38,6 +47,7 @@
   font-weight: 400;
   line-height: 25.20px;
   margin: 0;
+  color: #000000;
 }
 
 .request-button {

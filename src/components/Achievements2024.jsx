@@ -1,11 +1,16 @@
 import React from 'react';
 import './Achievements2024.css';
+// Import your images here, for example:
+// import awardImage from '../assets/images/award.jpg';
+// import winnerImage from '../assets/images/winner.jpg';
 
 function Achievements2024() {
   return (
     <div className="achievements-2024">
       <div className="achievement-card">
         <div className="achievement-icon">
+          {/* You can replace the custom icon with an image */}
+          {/* <img src={winnerImage} alt="Winner Icon" className="achievement-image" /> */}
           <div className="icon-bars">
             <div className="bar" style={{ height: '10.29px', background: '#FCBE7F' }}></div>
             <div className="bar" style={{ height: '20.51px', background: '#F68D40' }}></div>
@@ -38,6 +43,8 @@ function Achievements2024() {
 
       <div className="achievement-card">
         <div className="achievement-icon">
+          {/* You can replace the custom icon with an image */}
+          {/* <img src={awardImage} alt="Award Icon" className="achievement-image" /> */}
           <div className="icon-award">
             <div className="award-bar" style={{ width: '24.37px', height: '26px', opacity: '0.60', background: '#FF0044' }}></div>
             <div className="award-bar" style={{ width: '27.92px', height: '26px', opacity: '0.80', background: '#FF0044' }}></div>

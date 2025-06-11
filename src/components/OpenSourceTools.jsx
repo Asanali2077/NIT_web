@@ -1,24 +1,19 @@
 import React from 'react';
 import './OpenSourceTools.css';
+import frameImage from '../assets/images/Frame 4471.png';
 
 function OpenSourceTools() {
   return (
     <div className="open-source-tools">
-      <h2>Мы используем Open-Source инструменты</h2>
-      <div className="tools-container">
-        <div className="tool-logo">
-          <div className="logo-container">
-            <div className="logo-variant-3">
-              {/* Logo SVG elements would go here */}
-            </div>
-          </div>
+      <div className="tools-content">
+        <div className="tools-text">
+          <h2>Открытые инструменты</h2>
+          <p>
+            Мы создаем открытые инструменты для работы с данными, которые помогают государственным органам эффективно управлять информацией и принимать решения на основе данных.
+          </p>
         </div>
-        <div className="tool-logo">
-          <div className="logo-container">
-            <div className="logo-variant-4">
-              {/* Logo SVG elements would go here */}
-            </div>
-          </div>
+        <div className="tools-image">
+          <img src={frameImage} alt="Open Source Tools" className="frame-image" />
         </div>
       </div>
     </div>

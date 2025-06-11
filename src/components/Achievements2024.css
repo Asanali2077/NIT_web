@@ -21,6 +21,13 @@
   align-items: center;
 }
 
+/* Add styles for images */
+.achievement-image {
+  width: 41.07px;
+  height: 41.07px;
+  object-fit: contain;
+}
+
 .icon-bars {
   display: flex;
   gap: 6.01px;
