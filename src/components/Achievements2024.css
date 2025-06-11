@@ -1,0 +1,80 @@
+.achievements-2024 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30.80px;
+  padding: 82.13px 120px;
+  background: white;
+}
+
+.achievement-card {
+  flex: 1 1 0;
+  min-width: 308px;
+  display: flex;
+  flex-direction: column;
+  gap: 30.80px;
+}
+
+.achievement-icon {
+  display: flex;
+  gap: 9.20px;
+  align-items: center;
+}
+
+.icon-bars {
+  display: flex;
+  gap: 6.01px;
+}
+
+.bar {
+  width: 17.82px;
+}
+
+.icon-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3.79px;
+}
+
+.text-line {
+  height: 11.18px;
+}
+
+.icon-award {
+  display: flex;
+  flex-direction: column;
+  gap: 8.05px;
+}
+
+.award-bar {
+  height: 26px;
+}
+
+.award-dot {
+  height: 8.05px;
+}
+
+.achievement-content {
+  min-width: 205.33px;
+  display: flex;
+  flex-direction: column;
+  gap: 20.53px;
+}
+
+.achievement-content h3 {
+  color: #1E1E1E;
+  font-size: 24px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  line-height: 28.80px;
+  margin: 0;
+}
+
+.achievement-content p {
+  color: #757575;
+  font-size: 18px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  line-height: 25.20px;
+  margin: 0;
+} 

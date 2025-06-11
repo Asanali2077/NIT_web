@@ -1,0 +1,54 @@
+.open-source-tools {
+  width: 100%;
+  padding: 64.10px 120px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48.07px;
+}
+
+.open-source-tools h2 {
+  color: #1E1E1E;
+  font-size: 24.45px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  line-height: 29.34px;
+  text-align: center;
+  margin: 0;
+}
+
+.tools-container {
+  width: 100%;
+  height: 90.14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70.11px;
+}
+
+.tool-logo {
+  height: 32.05px;
+  overflow: hidden;
+}
+
+.logo-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-variant-3 {
+  width: 82.29px;
+  height: 32.05px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-variant-4 {
+  width: 210.61px;
+  height: 32.05px;
+  position: relative;
+  overflow: hidden;
+} 

@@ -1,0 +1,146 @@
+.our-developments {
+  width: 100%;
+  padding: 64.09px 120px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48.07px;
+}
+
+.developments-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.developments-header h2 {
+  color: #1E1E1E;
+  font-size: 24px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  line-height: 28.80px;
+  margin: 0;
+}
+
+.developments-header p {
+  color: #757575;
+  font-size: 20px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+}
+
+.search-container {
+  width: 338.48px;
+  display: flex;
+  gap: 12.02px;
+}
+
+.search-container input {
+  flex: 1;
+  min-width: 240.34px;
+  padding: 12.02px 16.02px;
+  background: white;
+  border: 1px solid #D9D9D9;
+  border-radius: 7.93px;
+  color: #B3B3B3;
+  font-size: 16.02px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  line-height: 16.02px;
+}
+
+.search-button {
+  padding: 12.02px;
+  background: #3E7B27;
+  border: none;
+  border-radius: 7.93px;
+  color: #F5F5F5;
+  font-size: 16.02px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  line-height: 16.02px;
+  cursor: pointer;
+}
+
+.products-grid {
+  width: 100%;
+  display: flex;
+  gap: 24.03px;
+}
+
+.product-card {
+  flex: 1;
+  min-width: 17.42px;
+  padding: 24.03px;
+  background: #FAFAFA;
+  border-radius: 8.11px;
+  display: flex;
+  gap: 24.03px;
+}
+
+.product-card img {
+  width: 162.98px;
+  height: 162.98px;
+  min-width: 162.98px;
+  background: #E3E3E3;
+}
+
+.product-content {
+  flex: 1;
+  min-width: 162.98px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-content h3 {
+  color: #1E1E1E;
+  font-size: 24.45px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  line-height: 29.34px;
+  margin: 0;
+}
+
+.product-content p {
+  flex: 1;
+  color: #757575;
+  font-size: 16.30px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  line-height: 22.82px;
+  margin: 0;
+}
+
+.view-button {
+  padding: 12.22px;
+  background: #3E7B27;
+  border: none;
+  border-radius: 8.11px;
+  color: white;
+  font-size: 16.30px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  line-height: 16.30px;
+  cursor: pointer;
+}
+
+.show-more-button {
+  width: 180.26px;
+  height: 50.07px;
+  padding: 17.02px 35.05px;
+  border: 1px solid #3E7B27;
+  border-radius: 8.01px;
+  background: transparent;
+  color: #3E7B27;
+  font-size: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  line-height: 16px;
+  cursor: pointer;
+} 
