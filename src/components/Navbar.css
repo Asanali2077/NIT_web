@@ -1,20 +1,41 @@
 .navbar {
   width: 100%;
-  height: 140.18px;
-  padding: 32.59px 120px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 40px;
   background: white;
   box-shadow: 0px 4px 4px -4px rgba(12, 12, 13, 0.05);
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.navbar-top {
+  display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 35.05px;
+  align-items: flex-start;
 }
 
 .navbar-left {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 24.44px;
+  gap: 20px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 8px;
 }
 
 .logo-container {
@@ -82,12 +103,6 @@
   line-height: 20.03px;
 }
 
-.navbar-menu {
-  display: flex;
-  gap: 8.01px;
-  flex-wrap: wrap;
-}
-
 .menu-item {
   padding: 8px;
   border-radius: 8.11px;
@@ -103,14 +118,6 @@
 
 .menu-item.active {
   background: #F5F5F5;
-}
-
-.navbar-right {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 12.02px;
 }
 
 .search-container {

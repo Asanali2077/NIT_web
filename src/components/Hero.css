@@ -1,24 +1,29 @@
 .hero {
-  width: 1350px;
+  width: 100vw;
   height: 300px;
-  padding: 171.11px 60px;
+  padding: 171.11px 0;
   position: relative;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 32.08px;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 }
 
 .hero-content {
-  max-width: 800px;
-  padding: 0;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 40px;
   text-align: left;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-left: 150px;
+  margin-top: -10px;
 }
 
 .hero-content h1 {
@@ -32,7 +37,7 @@
 
 .hero-content p {
   color: #1E1E1E;
-  font-size: 20px;
+  font-size: 25px;
   font-family: Inter, sans-serif;
   font-weight: 400;
   line-height: 30px;
