@@ -6,7 +6,6 @@ import OpenSourceTools from './components/OpenSourceTools'
 import OurDevelopments from './components/OurDevelopments'
 import Features from './components/Features'
 import Achievements from './components/Achievements'
-import Achievements2024 from './components/Achievements2024'
 import Navbar from './components/Navbar'
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
       <OurDevelopments />
       <OpenSourceTools />
       <Achievements />
-      <Achievements2024 />
       <Footer />
     </div>
   )

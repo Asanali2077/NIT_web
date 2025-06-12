@@ -1,7 +1,32 @@
+:root {
+  /* Светлая тема (значения по умолчанию) */
+  --bg: #ffffff;
+  --text-color: #333333;
+  --text-color2: #ffffff; 
+  --menu-item-color: #333333;
+  --search-input-bg: #f5f5f5;
+  --search-input-text: #333333;
+  --hover-bg: #f0f0f0;
+  --BgCard-dark:  #123524;
+}
+
+/* Темная тема */
+.dark-theme {
+  --bg:  rgba(31, 31, 31, 1) ;
+  --text-color: #ffffff;
+  --text-color2: #333333; 
+  --menu-item-color: #ffffff;
+  --search-input-bg: #2d2d2d;
+  --search-input-text: #ffffff;
+  --hover-bg: #333333;
+  --BgCard-dark: rgba(230, 230, 230, 1);
+}
+
+
 .achievements {
   width: 100%;
   padding: 82.13px 120px;
-  background: white;
+  background: var(--bg);
   display: flex;
   flex-direction: column;
   gap: 61.60px;
@@ -9,7 +34,7 @@
 
 .achievements h2 {
   text-align: center;
-  color: #1E1E1E;
+  color: var(--text-color);
   font-size: 24px;
   font-family: Inter, sans-serif;
   font-weight: 600;
@@ -114,7 +139,7 @@
 }
 
 .achievement-content h3 {
-  color: #1E1E1E;
+  color: var(--text-color);
   font-size: 24px;
   font-family: Inter, sans-serif;
   font-weight: 600;
