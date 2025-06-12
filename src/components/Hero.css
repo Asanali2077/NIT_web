@@ -10,8 +10,7 @@
   justify-content: center;
   align-items: center;
   gap: 32.08px;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
+
 }
 
 .hero-content {

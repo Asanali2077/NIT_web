@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import sunIcon from '../assets/images/sun.png';
 import moonIcon from '../assets/images/moon.png';
@@ -9,13 +9,23 @@ import whiteLogo from '../assets/images/light.svg';
 import blackLogo from '../assets/images/dark.svg';
 
 function Navbar() {
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
+
+  useEffect(() => {
+    document.body.classList.toggle('dark-theme', isDarkTheme);
+  }, [isDarkTheme]);
+
   return (
-    <div className="navbar">
+    <div className={`navbar ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
       <div className="navbar-top">
         <div className="navbar-left">
           <div className="logo-container">
             <div className="logo">
-              <img src={whiteLogo} alt="иконка" width="300" />
+              <img src={isDarkTheme ? blackLogo : whiteLogo} alt="иконка" width="300" />
             </div>
           </div>
         </div>
@@ -24,9 +34,8 @@ function Navbar() {
             <input type="text" placeholder="Поиск по сайту" className="search-input" />
             <img src={searchIcon} alt="Search" className="search-icon" />
           </div>
-          <div className="theme-toggle">
-            <img src={sunIcon} alt="Light Theme" className="theme-icon" />
-            <img src={moonIcon} alt="Dark Theme" className="theme-icon" />
+          <div className="theme-toggle" onClick={toggleTheme}>
+            <img src={isDarkTheme ? sunIcon : moonIcon} alt="Theme" className="theme-icon" />
           </div>
           <div className="language-selector">
             <span>РУС</span>

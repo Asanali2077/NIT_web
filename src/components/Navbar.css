@@ -1,9 +1,32 @@
+/* Добавляем CSS-переменные для цветов */
+:root {
+  /* Светлая тема (значения по умолчанию) */
+  --navbar-bg: #ffffff;
+  --text-color: #333333;
+  --menu-item-color: #333333;
+  --search-input-bg: #f5f5f5;
+  --search-input-text: #333333;
+  --hover-bg: #f0f0f0;
+  --active-menu-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* Темная тема */
+.dark-theme {
+  --navbar-bg:  rgba(18, 53, 36, 1) ;
+  --text-color: #ffffff;
+  --menu-item-color: #ffffff;
+  --search-input-bg: #2d2d2d;
+  --search-input-text: #ffffff;
+  --hover-bg: #333333;
+  --active-menu-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* Базовые стили навбара */
 .navbar {
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
-  padding: 20px 40px;
-  background: white;
+  padding: 10px 20px;
+  background-color: var(--navbar-bg);
   box-shadow: 0px 4px 4px -4px rgba(12, 12, 13, 0.05);
   display: flex;
   flex-direction: column;
@@ -13,6 +36,8 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
+  color: var(--text-color);
+  transition: all 0.3s ease; /* Плавный переход при смене темы */
 }
 
 .navbar-top {
@@ -22,18 +47,21 @@
 }
 
 .navbar-left {
+  margin-left: 80px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .navbar-right {
+  margin-right: 80px;
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
 .navbar-menu {
+  margin-left: 80px;
   display: flex;
   gap: 8px;
 }
@@ -98,26 +126,30 @@
 .brand-name {
   color: #1E1E1E;
   font-size: 20.03px;
-  font-family: Inter, sans-serif;
+  font-family: Inter, sans-serif; 
   font-weight: 600;
   line-height: 20.03px;
 }
 
+/* Стили для пунктов меню */
 .menu-item {
   padding: 8px;
   border-radius: 8.11px;
   border: none;
   background: none;
-  color: #1E1E1E;
+  color: var(--menu-item-color);
   font-size: 16px;
   font-family: Inter, sans-serif;
-  font-weight: 400;
-  line-height: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: var(--hover-bg);
 }
 
 .menu-item.active {
-  background: #F5F5F5;
+  background-color: var(--active-menu-bg);
 }
 
 .search-container {
@@ -128,15 +160,17 @@
   position: relative;
 }
 
+/* Стили для поискового поля */
 .search-input {
   width: 327.43px;
   padding: 12px 16px;
   padding-right: 40px;
-  border: 1px solid #D9D9D9;
+  background-color: var(--search-input-bg);
+  border: 1px solid var(--text-color);
   border-radius: 9470.81px;
   font-size: 16px;
   font-family: Inter, sans-serif;
-  color: #B3B3B3;
+  color: var(--search-input-text);
 }
 
 .search-input::placeholder {
@@ -164,26 +198,25 @@
   border-radius: 50%;
 }
 
+/* Стили для кнопки переключения темы */
 .theme-toggle {
   width: 51.34px;
-  height: 25.67px;
-  position: relative;
+  height: 51.34px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 6px;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
 }
 
 .theme-icon {
-  width: 19.25px;
-  height: 19.25px;
-  object-fit: contain;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.theme-icon:hover {
-  opacity: 0.8;
+  width: 24px;
+  height: 24px;
 }
 
 .language-selector {

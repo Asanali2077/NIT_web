@@ -3,7 +3,7 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 px;
-  padding-top: 136px; /* Добавляем отступ сверху для навбара */
+  padding-top: 125px; /* Добавляем отступ сверху для навбара */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,8 +14,8 @@
 /* Добавляем медиа-запрос для мобильных устройств */
 @media (max-width: 768px) {
   .app {
-    padding: 0 20px;
-    padding-top: 180px;
+    padding: 0 0px;
+    padding-top: 125px;
   }
 }
 
@@ -28,7 +28,7 @@
 }
 
 .app-header h1 {
-  font-size: 3rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   color: white;
 }
