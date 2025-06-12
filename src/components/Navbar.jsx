@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import sunIcon from '../assets/images/sun.png';
-import moonIcon from '../assets/images/moon.png';
-import chevronDownIcon from '../assets/images/chevron_down_light.png';
+import sunIcon from '../assets/images/sunicon2.svg';
+import moonIcon from '../assets/images/sunicon1.svg';
+import chevronDownIcon from '../assets/images/darkicon.svg';
+import chevronDownIconLight from '../assets/images/lighticon.svg';
 import exitToAppIcon from '../assets/images/Exit to app.png';
 import searchIcon from '../assets/images/Search.png';
 import whiteLogo from '../assets/images/light.svg';
 import blackLogo from '../assets/images/dark.svg';
+
 
 function Navbar() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -39,7 +41,7 @@ function Navbar() {
           </div>
           <div className="language-selector">
             <span>РУС</span>
-            <img src={chevronDownIcon} alt="Select Language" className="dropdown-icon" />
+            <img src={isDarkTheme ? chevronDownIconLight : chevronDownIcon} alt="Select Language" className="dropdown-icon" />
           </div>
           <button className="login-button">
             <img src={exitToAppIcon} alt="Login" className="user-icon" />
