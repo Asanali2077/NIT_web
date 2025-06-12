@@ -105,11 +105,13 @@
 
 .developer-info {
   position: absolute;
-  left: 697.27px;
-  top: 601.92px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
   display: flex;
   align-items: center;
   gap: 3.68px;
+  justify-content: center;
 }
 
 .developer-info span {
@@ -120,6 +122,7 @@
   line-height: 14.15px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .developer-logo {
