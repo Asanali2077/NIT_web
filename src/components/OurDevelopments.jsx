@@ -110,9 +110,9 @@ function OurDevelopments() {
   };
 
   const getScoreText = (score) => {
-    if (score >= 0.8) return 'Отлично подходит';
-    if (score >= 0.6) return 'Хорошее совпадение';
-    return 'Может быть полезно';
+    if (score >= 0.8) return t('developments-score-excellent');
+    if (score >= 0.6) return t('developments-score-good');
+    return t('developments-score-maybe');
   };
 
   const productsToShow = hasSearched ? searchResults : defaultProducts;
@@ -144,7 +144,7 @@ function OurDevelopments() {
           <button
             className='reset-button'
             onClick={resetSearch}
-            title='Сбросить поиск'
+            title={t('developments-reset-search')}
           >
             ✕
           </button>
@@ -155,9 +155,9 @@ function OurDevelopments() {
 
       {hasSearched && (
         <div className='search-info'>
-          🔍 Результаты поиска для: <strong>"{searchTerm}"</strong>
+          🔍 {t('developments-search-results')} <strong>"{searchTerm}"</strong>
           {searchResults.length > 0 && (
-            <span> (найдено: {searchResults.length})</span>
+            <span> ({t('developments-found')} {searchResults.length})</span>
           )}
         </div>
       )}
@@ -198,7 +198,7 @@ function OurDevelopments() {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <button className='view-button'>Смотреть</button>
+                    <button className='view-button'>{t('developments-view')}</button>
                   </a>
                 </div>
               </div>
@@ -206,16 +206,16 @@ function OurDevelopments() {
           : hasSearched &&
             !loading && (
               <div className='no-results'>
-                <p>😔 По запросу "{searchTerm}" ничего не найдено</p>
+                <p>😔 {t('developments-no-results', { query: searchTerm })}</p>
                 <button className='reset-button' onClick={resetSearch}>
-                  Сбросить поиск
+                  {t('developments-reset-search')}
                 </button>
               </div>
             )}
       </div>
 
       {!hasSearched && (
-        <button className='show-more-button'>Показать еще</button>
+        <button className='show-more-button'>{t('developments-show-more')}</button>
       )}
     </div>
   );

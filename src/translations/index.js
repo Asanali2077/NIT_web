@@ -33,7 +33,16 @@ export const translations = {
         'developments-default-title-3': 'E-обращения',
         'developments-default-desc-3': 'Платформа для подачи и обработки электронных обращений граждан',
         'open-source-title': 'Открытые инструменты',
-        'open-source-description': 'Мы создаем открытые инструменты для работы с данными, которые помогают государственным органам эффективно управлять информацией и принимать решения на основе данных.'
+        'open-source-description': 'Мы создаем открытые инструменты для работы с данными, которые помогают государственным органам эффективно управлять информацией и принимать решения на основе данных.',
+        'developments-view': 'Смотреть',
+        'developments-show-more': 'Показать еще',
+        'developments-reset-search': 'Сбросить поиск',
+        'developments-search-results': 'Результаты поиска для:',
+        'developments-found': 'найдено:',
+        'developments-no-results': 'По запросу "{{query}}" ничего не найдено',
+        'developments-score-excellent': 'Отлично подходит',
+        'developments-score-good': 'Хорошее совпадение',
+        'developments-score-maybe': 'Может быть полезно'
     },
     en: {
         'search': 'Search the site',
@@ -69,7 +78,16 @@ export const translations = {
         'developments-default-title-3': 'E-appeals',
         'developments-default-desc-3': 'Platform for submitting and processing electronic citizen appeals',
         'open-source-title': 'Open Source Tools',
-        'open-source-description': 'We create open source tools for data management that help government agencies effectively manage information and make data-driven decisions.'
+        'open-source-description': 'We create open source tools for data management that help government agencies effectively manage information and make data-driven decisions.',
+        'developments-view': 'View',
+        'developments-show-more': 'Show more',
+        'developments-reset-search': 'Reset search',
+        'developments-search-results': 'Search results for:',
+        'developments-found': 'found:',
+        'developments-no-results': 'No results found for "{{query}}"',
+        'developments-score-excellent': 'Excellent match',
+        'developments-score-good': 'Good match',
+        'developments-score-maybe': 'May be useful'
     },
     kk: {
         'search': 'Сайт бойынша іздеу',
@@ -105,7 +123,16 @@ export const translations = {
         'developments-default-title-3': 'Электронды өтініштер',
         'developments-default-desc-3': 'Электронды азаматтық өтініштерді беру және өңдеу платформасы',
         'open-source-title': 'Ашық құралдар',
-        'open-source-description': 'Біз мемлекеттік органдарға ақпаратты тиімді басқаруға және деректерге негізделген шешімдер қабылдауға көмектесетін деректермен жұмыс істеуге арналған ашық құралдар жасаймыз.'
+        'open-source-description': 'Біз мемлекеттік органдарға ақпаратты тиімді басқаруға және деректерге негізделген шешімдер қабылдауға көмектесетін деректермен жұмыс істеуге арналған ашық құралдар жасаймыз.',
+        'developments-view': 'Қарау',
+        'developments-show-more': 'Тағы көрсету',
+        'developments-reset-search': 'Іздеуді қалпына келтіру',
+        'developments-search-results': 'Іздеу нәтижелері:',
+        'developments-found': 'табылды:',
+        'developments-no-results': '"{{query}}" сұранысы бойынша ештеңе табылмады',
+        'developments-score-excellent': 'Тамаша сәйкестік',
+        'developments-score-good': 'Жақсы сәйкестік',
+        'developments-score-maybe': 'Пайдалы болуы мүмкін'
     }
 };
 

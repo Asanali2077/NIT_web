@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './Features.css';
 import RequestModal from './RequestModal';
+import { useLanguage } from '../context/LanguageContext';
 
 function Features() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { t } = useLanguage();
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -12,11 +14,8 @@ function Features() {
     <>
       <div className='features'>
         <div className='feature-card'>
-          <h2>Быстрое создание аналитических решений</h2>
-          <p>
-            Краткий сопроводительный текст, описывающий уникальность тезиса,
-            краткий сопроводительный текст, описывающий уникальность тезиса
-          </p>
+          <h2>{t('features-title-1')}</h2>
+          <p>{t('features-desc-1')}</p>
           <div className='feature-decoration blue'>
             <div className='decoration-circle'></div>
             <div className='decoration-blur'></div>
@@ -26,11 +25,8 @@ function Features() {
         </div>
 
         <div className='feature-card'>
-          <h2>Набор готовой аналитики для бизнеса</h2>
-          <p>
-            Краткий сопроводительный текст, описывающий уникальность тезиса,
-            краткий сопроводительный текст, описывающий уникальность тезиса
-          </p>
+          <h2>{t('features-title-2')}</h2>
+          <p>{t('features-desc-2')}</p>
           <div className='feature-decoration purple'>
             <div className='decoration-circle'></div>
             <div className='decoration-blur'></div>
@@ -39,13 +35,10 @@ function Features() {
         </div>
 
         <div className='feature-card dark'>
-          <h2>Возможность подать запрос на создание новых решений</h2>
-          <p>
-            Краткий сопроводительный текст, описывающий уникальность тезиса,
-            краткий сопроводительный текст, описывающий уникальность тезиса
-          </p>
+          <h2>{t('features-title-3')}</h2>
+          <p>{t('features-desc-3')}</p>
           <button className='request-button' onClick={openModal}>
-            Подать запрос
+            {t('features-submit')}
           </button>
           <div className='feature-decoration green'>
             <div className='decoration-circle'></div>
