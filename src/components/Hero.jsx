@@ -2,24 +2,25 @@ import React from 'react';
 import './Hero.css';
 import heroBg from '../assets/images/photo_2025-06-11_12-30-06.jpg';
 import nitecLogo from '../assets/images/logo nitec.png';
+import { useLanguage } from '../context/LanguageContext';
 
 function Hero() {
+  const { t } = useLanguage();
+
   return (
     <div className="hero" style={{ backgroundImage: `url(${heroBg})` }}>
       <div className="hero-content">
-        <h1>Smart Data Ukimet</h1>
+        <h1>{t('hero-title')}</h1>
         <p>
-          Мы помогаем правительству Республики Казахстан собирать, хранить и анализировать данные из государственных систем в деперсонализированном виде.
-          <br/><br/>
-          Создаем продукты для принятия эффективных решений на основе данных.
+          {t('hero-description')}
         </p>
         <div className="hero-buttons">
-          <button className="primary-button">Smart Data Ukimet</button>
-          <button className="secondary-button">SDU Demo</button>
-          <div className="availability">доступно только в ЕТС ГО</div>
+          <button className="primary-button">{t('hero-primary-button')}</button>
+          <button className="secondary-button">{t('hero-secondary-button')}</button>
+          <div className="availability">{t('hero-availability')}</div>
         </div>
         <div className="developer-info">
-          <span>Разработано</span>
+          <span>{t('hero-developed-by')}</span>
           <div className="developer-logo">
             <img src={nitecLogo} alt="NITEC" className="nitec-logo" />
           </div>

@@ -220,37 +220,66 @@
 }
 
 .language-selector {
-  padding: 8.01px;
-  border-radius: 8.01px;
+  padding: 8px 12px;
   display: flex;
   align-items: center;
-  gap: 8.01px;
+  gap: 8px;
   color: var(--text-color);
-  font-size: 16.02px;
+  font-size: 16px;
   font-family: Inter, sans-serif;
   cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.language-selector:hover {
+  transform: translateY(-1px);
+}
+
+.language-selector:active {
+  transform: translateY(1px);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--navbar-bg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.language-selector.active .language-dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.language-option {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.language-option:hover {
+  background-color: var(--hover-bg);
+  transform: translateX(4px);
 }
 
 .dropdown-icon {
-  width: 16.02px;
-  height: 16.02px;
-  object-fit: contain;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
 }
 
-.dropdown-icon::after {
-  content: '';
-  width: 8.01px;
-  height: 4.01px;
-  position: absolute;
-  left: 4.01px;
-  top: 6.01px;
-  border: 1.60px solid #2C2C2C;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+.language-selector.active .dropdown-icon {
+  transform: rotate(180deg);
 }
 
 .login-button {
