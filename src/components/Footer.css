@@ -1,210 +1,60 @@
 .footer {
-  width: 100%;
-  background: #123524;
-  padding: 40px 120px;
+  background-color: #123524;
   color: #f3f3f3;
+  padding: 60px 100px;
+  font-family: Inter, sans-serif;
+  width: 100vw;        /* или 100% */
+  box-sizing: border-box;
 }
+
 
 .footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  gap: 40px;
+  gap: 60px;
 }
 
-.footer-left {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+.footer-col {
+  flex: 1 1 200px;
+  min-width: 200px;
 }
 
-.logo-section {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 120px;
+.footer-col h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
 }
 
-/* Стили для логотипа компании */
-.company-logo {
-  height: 40px;
-  width: auto;
-  max-width: 120px;
-  object-fit: contain;
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Fallback стили для логотипа */
-.logo-fallback {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.footer-col ul li {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 6px;
 }
 
-.logo-icon {
-  width: 32px;
-  height: 32px;
-  background: white;
-  border-radius: 4px;
-}
-
-.logo-text {
-  font-size: 20px;
-  font-family: Inter, sans-serif;
-  font-weight: 700;
-  color: white;
-}
-
-.contact-info {
+.logo-block {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 24px;
 }
 
-.contact-item {
-  font-size: 14px;
-  font-family: Inter, sans-serif;
-  font-weight: 400;
-  color: #f3f3f3;
-  line-height: 1.4;
+.logo-img {
+  width: 120px;
+  height: auto;
 }
 
-.footer-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.logo-img.sdu {
+  width: 100px;
+  margin-top: 12px;
 }
 
-.footer-text {
-  font-size: 14px;
-  font-family: Inter, sans-serif;
-  font-weight: 400;
-  color: #b8b8b8;
-  white-space: nowrap;
-}
-
-.social-links {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.social-link {
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  position: relative;
-}
-
-.social-link:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-}
-
-/* Стили для изображений иконок соцсетей */
-.social-icon-img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  filter: brightness(0) invert(1); /* Делает иконки белыми */
-}
-
-/* Fallback SVG иконки */
-.social-icon-fallback {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.social-icon-fallback svg {
-  width: 16px;
-  height: 16px;
-}
-
-/* Специальные эффекты для разных соцсетей */
-.social-link:hover .social-icon-fallback.youtube svg {
-  fill: #ff0000;
-}
-
-.social-link:hover .social-icon-fallback.facebook svg {
-  fill: #1877f2;
-}
-
-.social-link:hover .social-icon-fallback.instagram svg {
-  fill: #e4405f;
-}
-
-/* Эффекты для пользовательских иконок */
-.social-link:hover .social-icon-img {
-  filter: none;
-  transition: filter 0.3s ease;
-}
-
-/* Адаптивность */
-@media (max-width: 1024px) {
-  .footer {
-    padding: 30px 60px;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-
-  .footer-left {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-
-  .footer-right {
-    width: 100%;
-    justify-content: space-between;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer {
-    padding: 20px;
-  }
-
-  .footer-left {
-    gap: 15px;
-  }
-
-  .contact-item {
-    font-size: 12px;
-  }
-
-  .footer-text {
-    font-size: 12px;
-  }
-
-  .social-links {
-    gap: 8px;
-  }
-
-  .social-link {
-    width: 36px;
-    height: 36px;
-  }
-
-  .social-icon-img {
-    width: 18px;
-    height: 18px;
-  }
-
-  .company-logo {
-    height: 32px;
-  }
+.copyright {
+  font-size: 16px;
+  line-height: 1.5;
 }
