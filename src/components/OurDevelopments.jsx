@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './OurDevelopments.css';
+import { useLanguage } from '../context/LanguageContext';
 
 function OurDevelopments() {
+  const { t } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -11,23 +13,20 @@ function OurDevelopments() {
   // Дефолтные карточки
   const defaultProducts = [
     {
-      title: 'Цифровая карта семьи',
-      description:
-        'Уникальная модель классификации семей по пяти категориям благополучия на основе 100+ критериев',
+      title: t('developments-default-title-1'),
+      description: t('developments-default-desc-1'),
       url: 'https://sdu.data.gov.kz/superset/dashboard/67',
       score: 0.95,
     },
     {
-      title: 'Мониторинг статусов заявок',
-      description:
-        'Система отслеживания статусов обращений граждан в режиме реального времени',
+      title: t('developments-default-title-2'),
+      description: t('developments-default-desc-2'),
       url: 'https://sdu.data.gov.kz/superset/dashboard/70/',
       score: 0.9,
     },
     {
-      title: 'E-обращения',
-      description:
-        'Платформа для подачи и обработки электронных обращений граждан',
+      title: t('developments-default-title-3'),
+      description: t('developments-default-desc-3'),
       url: 'https://sdu.data.gov.kz/superset/dashboard/369/',
       score: 0.88,
     },
@@ -35,7 +34,7 @@ function OurDevelopments() {
 
   const handleSearch = async () => {
     if (!searchTerm.trim()) {
-      setError('Введите поисковый запрос');
+      setError(t('developments-search-error'));
       return;
     }
 
@@ -44,8 +43,7 @@ function OurDevelopments() {
     setHasSearched(true);
 
     try {
-      // В Vite проекте API должен быть доступен через прокси или полный URL
-      const API_URL = 'http://localhost:8001/search'; // Прямо к ML модели
+      const API_URL = 'http://localhost:8001/search';
 
       const response = await fetch(API_URL, {
         method: 'POST',
@@ -61,7 +59,6 @@ function OurDevelopments() {
 
       const data = await response.json();
 
-      // Трансформируем данные из ML API в формат для компонента
       const transformedResults = data.map((item) => ({
         title: item['Наименование ИС'] || item.title || 'Без названия',
         description: `Регион: ${item['Регион'] || 'Не указан'} | Контур: ${
@@ -77,9 +74,8 @@ function OurDevelopments() {
       );
     } catch (error) {
       console.error('Ошибка поиска:', error);
-      setError('Ошибка при поиске. Проверьте подключение к ML модели.');
+      setError(t('developments-search-error-ml'));
 
-      // Fallback результаты при ошибке
       setSearchResults([
         {
           title: `Результаты для: "${searchTerm}"`,
@@ -108,9 +104,9 @@ function OurDevelopments() {
   };
 
   const getScoreColor = (score) => {
-    if (score >= 0.8) return '#3E7B27'; // Зеленый
-    if (score >= 0.6) return '#F68D40'; // Оранжевый
-    return '#757575'; // Серый
+    if (score >= 0.8) return '#3E7B27';
+    if (score >= 0.6) return '#F68D40';
+    return '#757575';
   };
 
   const getScoreText = (score) => {
@@ -119,23 +115,19 @@ function OurDevelopments() {
     return 'Может быть полезно';
   };
 
-  // Показываем результаты поиска или дефолтные карточки
   const productsToShow = hasSearched ? searchResults : defaultProducts;
 
   return (
     <div className='our-developments'>
       <div className='developments-header'>
-        <h2>Наши разработки</h2>
-        <p>
-          Наши флагманские продукты, используемые высшими государственными
-          органами на ежедневной основе
-        </p>
+        <h2>{t('developments-title')}</h2>
+        <p>{t('developments-subtitle')}</p>
       </div>
 
       <div className='search-container'>
         <input
           type='text'
-          placeholder='Поиск данных: семьи, образование, статистика...'
+          placeholder={t('developments-search-placeholder')}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyPress={handleKeyPress}
@@ -146,7 +138,7 @@ function OurDevelopments() {
           onClick={handleSearch}
           disabled={loading || !searchTerm.trim()}
         >
-          {loading ? 'Поиск...' : 'Найти'}
+          {loading ? t('developments-search-loading') : t('developments-search-button')}
         </button>
         {hasSearched && (
           <button

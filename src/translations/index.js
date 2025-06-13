@@ -31,7 +31,9 @@ export const translations = {
         'developments-default-title-2': 'Мониторинг статусов заявок',
         'developments-default-desc-2': 'Система отслеживания статусов обращений граждан в режиме реального времени',
         'developments-default-title-3': 'E-обращения',
-        'developments-default-desc-3': 'Платформа для подачи и обработки электронных обращений граждан'
+        'developments-default-desc-3': 'Платформа для подачи и обработки электронных обращений граждан',
+        'open-source-title': 'Открытые инструменты',
+        'open-source-description': 'Мы создаем открытые инструменты для работы с данными, которые помогают государственным органам эффективно управлять информацией и принимать решения на основе данных.'
     },
     en: {
         'search': 'Search the site',
@@ -65,7 +67,9 @@ export const translations = {
         'developments-default-title-2': 'Application Status Monitoring',
         'developments-default-desc-2': 'Real-time system for tracking citizen appeal statuses',
         'developments-default-title-3': 'E-appeals',
-        'developments-default-desc-3': 'Platform for submitting and processing electronic citizen appeals'
+        'developments-default-desc-3': 'Platform for submitting and processing electronic citizen appeals',
+        'open-source-title': 'Open Source Tools',
+        'open-source-description': 'We create open source tools for data management that help government agencies effectively manage information and make data-driven decisions.'
     },
     kk: {
         'search': 'Сайт бойынша іздеу',
@@ -99,7 +103,9 @@ export const translations = {
         'developments-default-title-2': 'Өтініштер статусын бақылау',
         'developments-default-desc-2': 'Азаматтардың өтініштерінің статусын жылдамдық режимінде қадағалау жүйесі',
         'developments-default-title-3': 'Электронды өтініштер',
-        'developments-default-desc-3': 'Электронды азаматтық өтініштерді беру және өңдеу платформасы'
+        'developments-default-desc-3': 'Электронды азаматтық өтініштерді беру және өңдеу платформасы',
+        'open-source-title': 'Ашық құралдар',
+        'open-source-description': 'Біз мемлекеттік органдарға ақпаратты тиімді басқаруға және деректерге негізделген шешімдер қабылдауға көмектесетін деректермен жұмыс істеуге арналған ашық құралдар жасаймыз.'
     }
 };
 
