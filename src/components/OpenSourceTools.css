@@ -10,15 +10,13 @@
 
 /* Темная тема */
 .dark-theme {
-  --bg:  rgba(31, 31, 31, 1) ;
+  --bg: rgba(31, 31, 31, 1);
   --text-color: #ffffff;
   --menu-item-color: #ffffff;
   --search-input-bg: #2d2d2d;
   --search-input-text: #ffffff;
   --hover-bg: #333333;
 }
-
-
 
 .open-source-tools {
   width: 100%;
@@ -66,7 +64,7 @@
 
 .frame-image {
   width: 100%;
-  max-width: 800px;
+  max-width: 1600px;
   height: auto;
   object-fit: contain;
 }
@@ -114,4 +112,4 @@
   height: 32.05px;
   position: relative;
   overflow: hidden;
-} 
+}

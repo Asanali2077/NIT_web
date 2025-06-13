@@ -1,92 +1,210 @@
 .footer {
   width: 100%;
   background: #123524;
-  padding: 50.86px 112.91px 160px;
-  color: #F3F3F3;
+  padding: 40px 120px;
+  color: #f3f3f3;
 }
 
 .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  align-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
 }
 
-.footer-section {
-  width: 266.50px;
-  min-width: 244.13px;
+.footer-left {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
+  align-items: center;
+  gap: 40px;
 }
 
-.logo-container {
-  width: 123px;
-  height: 20px;
-  position: relative;
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 120px;
 }
 
-.logo {
-  width: 100%;
-  height: 100%;
-  position: relative;
+/* Стили для логотипа компании */
+.company-logo {
+  height: 40px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
 }
 
-.logo-text {
-  width: 82.02px;
-  height: 24.56px;
-  position: absolute;
-  left: 40.91px;
-  top: -4.52px;
-  background: white;
+/* Fallback стили для логотипа */
+.logo-fallback {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .logo-icon {
-  width: 32.72px;
-  height: 32.69px;
-  position: absolute;
-  left: 0;
-  top: -6.44px;
+  width: 32px;
+  height: 32px;
   background: white;
-  border-radius: 0.50px;
+  border-radius: 4px;
 }
 
-.sdu-logo {
-  width: 86.40px;
-  height: 20px;
-  position: relative;
-}
-
-.copyright {
-  font-size: 16.28px;
+.logo-text {
+  font-size: 20px;
   font-family: Inter, sans-serif;
-  font-weight: 400;
-  line-height: 22.79px;
+  font-weight: 700;
+  color: white;
 }
 
-.section-title {
-  font-size: 16px;
-  font-family: Inter, sans-serif;
-  font-weight: 600;
-  line-height: 22.40px;
-  padding-bottom: 16.28px;
-}
-
-.section-links {
+.contact-info {
   display: flex;
   flex-direction: column;
+  gap: 4px;
+}
+
+.contact-item {
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  color: #f3f3f3;
+  line-height: 1.4;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-text {
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  color: #b8b8b8;
+  white-space: nowrap;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
   gap: 12px;
 }
 
-.section-links a {
-  color: #F3F3F3;
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
   text-decoration: none;
-  font-size: 16px;
-  font-family: Inter, sans-serif;
-  font-weight: 400;
-  line-height: 22.40px;
+  position: relative;
 }
 
-.section-links a:hover {
-  text-decoration: underline;
-} 
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Стили для изображений иконок соцсетей */
+.social-icon-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Делает иконки белыми */
+}
+
+/* Fallback SVG иконки */
+.social-icon-fallback {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon-fallback svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Специальные эффекты для разных соцсетей */
+.social-link:hover .social-icon-fallback.youtube svg {
+  fill: #ff0000;
+}
+
+.social-link:hover .social-icon-fallback.facebook svg {
+  fill: #1877f2;
+}
+
+.social-link:hover .social-icon-fallback.instagram svg {
+  fill: #e4405f;
+}
+
+/* Эффекты для пользовательских иконок */
+.social-link:hover .social-icon-img {
+  filter: none;
+  transition: filter 0.3s ease;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 30px 60px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px;
+  }
+
+  .footer-left {
+    gap: 15px;
+  }
+
+  .contact-item {
+    font-size: 12px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
+
+  .social-links {
+    gap: 8px;
+  }
+
+  .social-link {
+    width: 36px;
+    height: 36px;
+  }
+
+  .social-icon-img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .company-logo {
+    height: 32px;
+  }
+}

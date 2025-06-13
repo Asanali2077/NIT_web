@@ -8,7 +8,10 @@ import exitToAppIcon from '../assets/images/Exit to app.png';
 import searchIcon from '../assets/images/Search.png';
 import whiteLogo from '../assets/images/light.svg';
 import blackLogo from '../assets/images/dark.svg';
+<<<<<<< HEAD
 import { useLanguage } from '../context/LanguageContext';
+=======
+>>>>>>> 48aacbb988a89d673c11b8bb18e3ac9bb958af11
 
 function Navbar() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -48,14 +51,19 @@ function Navbar() {
 
   return (
     <div className={`navbar ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
-      <div className="navbar-top">
-        <div className="navbar-left">
-          <div className="logo-container">
-            <div className="logo">
-              <img src={isDarkTheme ? blackLogo : whiteLogo} alt="иконка" width="300" />
+      <div className='navbar-top'>
+        <div className='navbar-left'>
+          <div className='logo-container'>
+            <div className='logo'>
+              <img
+                src={isDarkTheme ? blackLogo : whiteLogo}
+                alt='иконка'
+                width='300'
+              />
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div className="navbar-right">
           <div className="search-container">
             <input type="text" placeholder={t('search')} className="search-input" />
@@ -86,9 +94,33 @@ function Navbar() {
         <button className="menu-item">{t('achievements')}</button>
         <button className="menu-item">{t('submit-request')}</button>
         <button className="menu-item">{t('ccs')}</button>
+=======
+        <div className='navbar-right'>
+          <div className='theme-toggle' onClick={toggleTheme}>
+            <img
+              src={isDarkTheme ? sunIcon : moonIcon}
+              alt='Theme'
+              className='theme-icon'
+            />
+          </div>
+          <div className='language-selector'>
+            <span>РУС</span>
+            <img
+              src={isDarkTheme ? chevronDownIconLight : chevronDownIcon}
+              alt='Select Language'
+              className='dropdown-icon'
+            />
+          </div>
+        </div>
+      </div>
+      <div className='navbar-menu'>
+        <button className='menu-item active'>Разработки</button>
+        <button className='menu-item'>Достижения</button>
+        <button className='menu-item'>Подать запрос</button>
+>>>>>>> 48aacbb988a89d673c11b8bb18e3ac9bb958af11
       </div>
     </div>
   );
 }
 
-export default Navbar; 
+export default Navbar;
