@@ -1,14 +1,24 @@
+:root {
+  --bg: #ffffff;
+  --text-color: #333333;
+  --text-color2: #ffffff;
+}
+
+html,
+body {
+  color: var(--text-color);
+  background-color: var(--bg);
+}
 .app {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 px;
-  padding-top: 125.90px; /* Добавляем отступ сверху для навбара */
+  padding-top: 125.9px; /* Добавляем отступ сверху для навбара */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: white;
 }
 
 /* Добавляем медиа-запрос для мобильных устройств */
@@ -37,4 +47,4 @@
   font-size: 1.2rem;
   color: white;
   margin-bottom: 1rem;
-} 
+}
