@@ -16,34 +16,34 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 460px;
-  overflow: hidden;.text-content {
-  position: relative;
-  z-index: 2;
-}
+  overflow: hidden;
+  .text-content {
+    position: relative;
+    z-index: 2;
+  }
 
-.feature-image {
-  position: absolute;
-  max-width: 160px;
-  height: auto;
-  z-index: 1;
-  pointer-events: none;
-}
+  .feature-image {
+    position: absolute;
+    max-width: 160px;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+  }
 
-.img-blue {
-  bottom: 24px;
-  right: 24px;
-}
+  .img-blue {
+    bottom: 24px;
+    right: 24px;
+  }
 
-.img-purple {
-  top: 24px;
-  right: 24px;
-}
+  .img-purple {
+    top: 24px;
+    right: 24px;
+  }
 
-.img-green {
-  bottom: 24px;
-  right: 24px;
-}
-
+  .img-green {
+    bottom: 24px;
+    right: 24px;
+  }
 }
 
 .feature-card.dark {
